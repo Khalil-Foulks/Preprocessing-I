@@ -153,7 +153,6 @@ body {
 }
 header {
   font-family: "Righteous", cursive;
-  border: 0.1rem solid red;
 }
 header nav {
   display: flex;
@@ -168,67 +167,93 @@ header nav a {
 }
 .name h1 {
   font-size: 4rem;
-  border: 1px dotted purple;
 }
 .name h2 {
   font-size: 4rem;
-  border: 1px dotted purple;
-}
-.intro {
-  border: 0.1rem solid green;
 }
 .intro .intro-container {
   display: flex;
   align-content: center;
   background-color: skyblue;
+  text-align: center;
+}
+@media (max-width: 515px) {
+  .intro .intro-container {
+    flex-direction: column;
+  }
 }
 .intro .intro-container img {
   flex-grow: 2;
-  flex-basis: 2500px;
+  border-bottom: 2px dotted indigo;
 }
 .intro .intro-container .text-container {
-  margin: 0 40px;
+  margin: 0 4rem;
 }
 .intro .intro-container .text-container h2 {
   font-size: 4rem;
   text-align: center;
 }
+@media (max-width: 515px) {
+  .intro .intro-container .text-container h2 {
+    font-size: 3rem;
+  }
+}
 .intro .intro-container .text-container p {
   font-size: 1.6rem;
-  margin: 20px 0 0;
+  margin: 2rem 0 0;
 }
 .middle-content {
-  border: 0.1rem solid blue;
+  border-bottom: 2px dotted indigo;
 }
 .middle-content h2 {
   display: flex;
-  align-items: baseline;
   justify-content: center;
+  align-items: baseline;
   font-size: 4rem;
   text-align: center;
 }
 .middle-content .skills {
   display: flex;
-  align-items: baseline;
   justify-content: center;
-  border: 0.1rem solid blue;
+  align-items: baseline;
+  text-align: center;
 }
 .middle-content .skills .front-end {
   font-size: 1.6rem;
 }
 .middle-content .skills .front-end h3 .one {
-  font-size: 50px;
+  font-size: 5rem;
 }
 .work {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: stretch;
 }
 .work h2 {
   font-size: 4rem;
   text-align: center;
-  border: 0.1rem solid red;
 }
 .work .jobs {
+  height: 20rem;
+}
+.work .jobs .headings {
   display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+.work .jobs .info {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+}
+footer {
+  background-color: slategray;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+footer a {
+  font-size: 25px;
 }

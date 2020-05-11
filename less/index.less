@@ -13,7 +13,14 @@
 
 
 // mixins
+.flex() {
+	display: flex;
+	justify-content: center;
+}
 
+.border() {
+	border-bottom: 2px dotted indigo;
+}
 
 
 
@@ -170,7 +177,6 @@ body {
 
 header {
 	font-family: @heading-font;
-	border: .1rem solid red;
 
 	nav {
 		display: flex;
@@ -190,45 +196,55 @@ header {
 
 // closes the header
 
-.name{
+.name {
 	text-align: center;
 
-	h1{
+	h1 {
 		font-size: 4rem;
-		border: 1px dotted purple;
 	}
-	h2{
+
+	h2 {
 		font-size: 4rem;
-		border: 1px dotted purple;
 	}
 }
 
 .intro {
-	border: .1rem solid green;
 
 	.intro-container {
 		display: flex;
-		
 		align-content: center;
 		background-color: skyblue;
+		text-align: center;
 
-		img{
-			flex-grow: 2;
-			flex-basis: 2500px;
+		@media (max-width:515px) {
+			flex-direction: column;
 		}
+
+
+
+		img {
+			flex-grow: 2;
+			.border();
+		}
+
 		.text-container {
-			margin: 0 40px;
+			margin: 0 4rem;
+
 			h2 {
 				font-size: 4rem;
 				text-align: center;
-				
+
+				@media (max-width:515px) {
+					font-size: 3rem;
+				}
+
 			}
 
 			// closes the h2 inside intro
 
 			p {
 				font-size: @16px-font;
-				margin: 20px 0 0;
+				margin: 2rem 0 0;
 			}
 
 			//closes the p inside intro
@@ -244,34 +260,37 @@ header {
 
 .middle-content {
 
-	border: .1rem solid blue;
+	.border();
 
 	h2 {
-		display: flex;
+		.flex();
 		align-items: baseline;
-		justify-content: center;
 		font-size: 4rem;
 		text-align: center;
 
 	}
 
 	//closes h2
-	
-	.skills {
-		display: flex;
-		align-items: baseline;
-		justify-content: center;
-		border: .1rem solid blue;
 
+	.skills {
+		.flex();
+		align-items: baseline;
+		text-align: center;
 
 		.front-end {
 			font-size: @16px-font;
-			h3{
-				.one{
-					font-size: 50px;
-				}//closes span
-			}//closes h3
+
+			h3 {
+				.one {
+					font-size: 5rem;
+				}
+
+				//closes span
+			}
+
+			//closes h3
 		}
+
 		//closes front-end
 	}
 
@@ -280,19 +299,59 @@ header {
 
 //closes middle content
 
-.work{
+.work {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
+	align-content: space-around;
+	align-items: stretch;
 
-	h2{
+
+	h2 {
 		font-size: 4rem;
 		text-align: center;
-		border: .1rem solid red;
 	}
 
-	.jobs{
-		display: flex;
+	.jobs {
+		height: 20rem;
+		
+
+		.headings {
+			display: flex;
+			justify-content: space-around;
+			font-size: 2rem;
+			
+
+		}
+
+		//closes headings
+		.info {
+			display: flex;
+			justify-content: space-around;
+			font-size: @16px-font;
+
+		}
+
+		//closes info
 	}
 
-}//closes work
+	//closes jobs
+
+}
+
+//closes work
+
+footer {
+	background-color: slategray;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	a {
+		font-size: 25px;
+	}
+
+	//closes a
+}
+
+//closes footer
