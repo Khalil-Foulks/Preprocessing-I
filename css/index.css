@@ -192,6 +192,12 @@ header nav a {
   flex-grow: 2;
   border-bottom: 2px dotted indigo;
 }
+@media (max-width: 515px) {
+  .intro .intro-container img {
+    width: 100%;
+    height: auto;
+  }
+}
 .intro .intro-container .text-container {
   margin: 0 4rem;
 }
@@ -255,10 +261,20 @@ header nav a {
   font-size: 2rem;
   font-weight: bold;
 }
+@media (max-width: 515px) {
+  .work .jobs .headings {
+    margin-top: 2rem;
+  }
+}
 .work .jobs .info {
   display: flex;
   justify-content: space-around;
   font-size: 1.6rem;
+}
+@media (max-width: 515px) {
+  .work .jobs .info {
+    margin-top: 2rem;
+  }
 }
 footer {
   background-color: slategray;
