@@ -242,9 +242,7 @@ header {
 				font-size: 4rem;
 				text-align: center;
 
-				@media (max-width:500px) {
-					font-size: 3rem;
-				}
+
 
 			}
 
@@ -253,6 +251,10 @@ header {
 			p {
 				font-size: @16px-font;
 				margin: 2rem 0 0;
+
+				@media (max-width:500px) {
+					font-size: 2rem;
+				}
 			}
 
 			//closes the p inside intro
@@ -299,6 +301,10 @@ header {
 
 			b {
 				@16px-font: 1.6rem;
+				
+				@media (max-width:500px) {
+					font-size: 2rem;
+				}
 			}
 		}
 
@@ -350,6 +356,7 @@ header {
 			
 			@media (max-width:500px) {
 				margin-top: 2rem;
+				font-size: 2rem;
 			}
 
 		}
@@ -371,6 +378,11 @@ footer {
 
 	a {
 		font-size: 2.5rem;
+
+		
+		@media (max-width:500px) {
+			font-size: 3rem;
+		}
 	}
 
 	//closes a

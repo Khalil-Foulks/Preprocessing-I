@@ -205,14 +205,14 @@ header nav a {
   font-size: 4rem;
   text-align: center;
 }
-@media (max-width: 500px) {
-  .intro .intro-container .text-container h2 {
-    font-size: 3rem;
-  }
-}
 .intro .intro-container .text-container p {
   font-size: 1.6rem;
   margin: 2rem 0 0;
+}
+@media (max-width: 500px) {
+  .intro .intro-container .text-container p {
+    font-size: 2rem;
+  }
 }
 .middle-content {
   margin-top: 1rem;
@@ -238,6 +238,11 @@ header nav a {
   font-size: 2rem;
   font-weight: bold;
   margin: 1rem;
+}
+@media (max-width: 500px) {
+  .middle-content .skills .front-end b {
+    font-size: 2rem;
+  }
 }
 .work {
   display: flex;
@@ -274,6 +279,7 @@ header nav a {
 @media (max-width: 500px) {
   .work .jobs .info {
     margin-top: 2rem;
+    font-size: 2rem;
   }
 }
 footer {
@@ -284,4 +290,9 @@ footer {
 }
 footer a {
   font-size: 2.5rem;
+}
+@media (max-width: 500px) {
+  footer a {
+    font-size: 3rem;
+  }
 }
