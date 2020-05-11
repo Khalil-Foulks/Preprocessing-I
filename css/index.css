@@ -165,6 +165,11 @@ header nav a {
 .name {
   text-align: center;
 }
+@media (max-width: 515px) {
+  .name {
+    margin-top: 1rem;
+  }
+}
 .name h1 {
   font-size: 4rem;
 }
@@ -176,6 +181,7 @@ header nav a {
   align-content: center;
   background-color: skyblue;
   text-align: center;
+  margin-top: 1rem;
 }
 @media (max-width: 515px) {
   .intro .intro-container {
@@ -203,6 +209,7 @@ header nav a {
   margin: 2rem 0 0;
 }
 .middle-content {
+  margin-top: 1rem;
   border-bottom: 2px dotted indigo;
 }
 .middle-content h2 {
@@ -221,8 +228,10 @@ header nav a {
 .middle-content .skills .front-end {
   font-size: 1.6rem;
 }
-.middle-content .skills .front-end h3 .one {
-  font-size: 5rem;
+.middle-content .skills .front-end h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem;
 }
 .work {
   display: flex;
@@ -230,10 +239,12 @@ header nav a {
   justify-content: space-around;
   align-content: space-around;
   align-items: stretch;
+  margin-top: 1rem;
 }
 .work h2 {
   font-size: 4rem;
   text-align: center;
+  margin-top: 1rem;
 }
 .work .jobs {
   height: 20rem;
@@ -242,6 +253,7 @@ header nav a {
   display: flex;
   justify-content: space-around;
   font-size: 2rem;
+  font-weight: bold;
 }
 .work .jobs .info {
   display: flex;

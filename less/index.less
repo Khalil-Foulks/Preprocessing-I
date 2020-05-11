@@ -10,7 +10,7 @@
 @heading-font: "Righteous", cursive;
 @body-font: "Lato", sans-serif;
 @16px-font: 1.6rem;
-
+@top-margin: 1rem;
 
 // mixins
 .flex() {
@@ -199,6 +199,10 @@ header {
 .name {
 	text-align: center;
 
+	@media (max-width:515px) {
+		margin-top: @top-margin;
+	}
+
 	h1 {
 		font-size: 4rem;
 	}
@@ -209,12 +213,12 @@ header {
 }
 
 .intro {
-
 	.intro-container {
 		display: flex;
 		align-content: center;
 		background-color: skyblue;
 		text-align: center;
+		margin-top: @top-margin;
 
 		@media (max-width:515px) {
 			flex-direction: column;
@@ -259,7 +263,7 @@ header {
 //closes the intro
 
 .middle-content {
-
+	margin-top: @top-margin;
 	.border();
 
 	h2 {
@@ -281,14 +285,17 @@ header {
 			font-size: @16px-font;
 
 			h3 {
-				.one {
-					font-size: 5rem;
-				}
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 1rem;
 
-				//closes span
 			}
 
 			//closes h3
+
+			b {
+				@16px-font: 1.6rem;
+			}
 		}
 
 		//closes front-end
@@ -305,22 +312,26 @@ header {
 	justify-content: space-around;
 	align-content: space-around;
 	align-items: stretch;
+	margin-top: @top-margin;
 
 
 	h2 {
 		font-size: 4rem;
 		text-align: center;
+		margin-top: @top-margin;
 	}
 
 	.jobs {
 		height: 20rem;
-		
+
+
 
 		.headings {
 			display: flex;
 			justify-content: space-around;
 			font-size: 2rem;
-			
+			font-weight: bold;
+
 
 		}
 
