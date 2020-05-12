@@ -4,19 +4,112 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Righteous&display=swap");
+
+//variables
+@heading-font: "Righteous", cursive;
+@body-font: "Lato", sans-serif;
+@16px-font: 1.6rem;
+@top-margin: 1rem;
+@silver-background: silver;
+
+// mixins
+.flex() {
+	display: flex;
+	justify-content: center;
+}
+
+.border() {
+	border-bottom: 2px dotted indigo;
+}
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,36 +117,395 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html {
+	font-size: 62.5%;
 }
 
+html,
+body {
+	height: 100%;
+}
+
+header {
+	font-family: @heading-font;
+
+	nav {
+		display: flex;
+		justify-content: space-around;
+
+		a {
+
+			text-decoration: none;
+			font-size: @16px-font;
+		}
+
+		//closes the a inside nav inside header
+	}
+
+	//closes the nav inside header
+}
+
+// closes the header
+
+.name {
+	text-align: center;
+
+	@media (max-width:515px) {
+		margin-top: @top-margin;
+	}
+
+	//closes media
+
+	h1 {
+		font-size: 4rem;
+	}
+
+	//closes h1
+
+	h2 {
+		font-size: 4rem;
+	}
+
+	//closes h2
+}
+
+// closes name
+
+.intro {
+	.intro-container {
+		display: flex;
+		align-content: center;
+		background-color: skyblue;
+		text-align: center;
+		margin-top: @top-margin;
+
+		@media (max-width:500px) {
+			flex-direction: column;
+		}
+
+		//closes media
+
+
+
+		img {
+			flex-grow: 2;
+			.border();
+
+			@media (max-width:500px) {
+				width: 100%;
+				height: auto;
+			}
+
+			//closes media
+		}
+
+		//img
+
+		.text-container {
+			margin: 0 4rem;
+
+			h2 {
+				font-size: 4rem;
+				text-align: center;
+
+
+
+			}
+
+			//closes h2
+
+			// closes the h2 inside intro
+
+			p {
+				font-size: @16px-font;
+				margin: 2rem 0 0;
+
+				@media (max-width:500px) {
+					font-size: 2rem;
+				}
+			}
+
+			//closes the p inside intro
+		}
+
+		//closes text container
+	}
+
+	//closes intro-container	
+}
+
+//closes the intro
+
+.middle-content {
+	margin-top: @top-margin;
+	.border();
+
+	h2 {
+		font-size: 4rem;
+		text-align: center;
+
+	}
+
+	//closes h2
+
+	.skills {
+		.flex();
+		text-align: center;
+
+		.front-end {
+			font-size: @16px-font;
+
+			span {
+				font-size: 2rem;
+				font-weight: bold;
+				margin: 1rem;
+
+			}
+
+			//closes span
+
+
+
+			b {
+				@16px-font: 1.6rem;
+
+				@media (max-width:500px) {
+					font-size: 2rem;
+				}
+
+				//closes media
+			}
+
+			//closes b
+		}
+
+		//closes front-end
+	}
+
+	//closes skill section
+}
+
+//closes middle content
+
+.work {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: space-around;
+	align-items: stretch;
+	margin-top: @top-margin;
+
+
+	h2 {
+		font-size: 4rem;
+		text-align: center;
+		margin-top: @top-margin;
+	}
+
+	//closes h2
+
+	.jobs {
+		height: 20rem;
+
+		@media(max-width:500px) {
+			height: auto;
+		}
+
+		//closes media
+
+
+
+		.headings {
+			display: flex;
+			justify-content: space-around;
+			font-size: 2rem;
+			font-weight: bold;
+			margin: 1% 0 0 0;
+
+			h3 {
+				width: 50%;
+				text-align: center;
+			}
+
+			//closes h3
+
+			@media(max-width:500px) {
+				margin-top: 2rem;
+			}
+
+			//closes media
+		}
+
+		//closes headings
+		.job1 {
+			display: flex;
+			justify-content: space-around;
+			font-size: @16px-font;
+			background-color: @silver-background;
+
+			@media (max-width:500px) {
+				margin: 2rem 0 0 0;
+				font-size: 1.8rem;
+			}
+
+			//closes media
+
+			p {
+				width: 50%;
+				text-align: center;
+				margin: .5rem 0;
+
+				@media (max-width:500px) {
+					margin: 0 1% 0 1%;
+				}
+
+				//closes media
+			}
+
+			//closes p
+
+		}
+
+		//closes job 1
+
+		.job2 {
+			display: flex;
+			justify-content: space-around;
+			font-size: @16px-font;
+
+			p {
+				width: 50%;
+				text-align: center;
+				margin: .5rem 0;
+
+				@media (max-width:500px) {
+					margin: 0 1% 0 1%;
+				}
+
+				//closes media
+			}
+
+			//closes p
+
+
+			@media (max-width:500px) {
+				margin-top: 2rem;
+				font-size: 1.8rem;
+			}
+
+			//closes media
+
+		}
+
+		//closes job 2
+
+		.job3 {
+			display: flex;
+			justify-content: space-around;
+			font-size: @16px-font;
+			background-color: @silver-background;
+
+			@media (max-width:500px) {
+				margin: 2rem 0 0 0;
+				font-size: 1.8rem;
+			}
+
+			p {
+				width: 50%;
+				text-align: center;
+				margin: .5rem 0;
+
+				@media (max-width:500px) {
+					margin: 0 1% 0 1%;
+				}
+
+				//closes media
+			}
+
+			//closes p
+
+		}
+
+		//closes job 3
+
+
+
+	}
+
+	//closes jobs
+
+}
+
+//closes work
+
+footer {
+	background-color: slategray;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	a {
+		font-size: 2.5rem;
+
+
+		@media (max-width:500px) {
+			font-size: 3rem;
+		}
+
+		//closes media
+	}
+
+	//closes a
+}
+
+//closes footer

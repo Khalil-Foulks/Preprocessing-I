@@ -1,1 +1,358 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Righteous'), local('Righteous-Regular'), url(https://fonts.gstatic.com/s/righteous/v8/1cXxaUPXBpj2rGoU7C9mjw.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+header {
+  font-family: "Righteous", cursive;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+}
+header nav a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+.name {
+  text-align: center;
+}
+@media (max-width: 515px) {
+  .name {
+    margin-top: 1rem;
+  }
+}
+.name h1 {
+  font-size: 4rem;
+}
+.name h2 {
+  font-size: 4rem;
+}
+.intro .intro-container {
+  display: flex;
+  align-content: center;
+  background-color: skyblue;
+  text-align: center;
+  margin-top: 1rem;
+}
+@media (max-width: 500px) {
+  .intro .intro-container {
+    flex-direction: column;
+  }
+}
+.intro .intro-container img {
+  flex-grow: 2;
+  border-bottom: 2px dotted indigo;
+}
+@media (max-width: 500px) {
+  .intro .intro-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+.intro .intro-container .text-container {
+  margin: 0 4rem;
+}
+.intro .intro-container .text-container h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.intro .intro-container .text-container p {
+  font-size: 1.6rem;
+  margin: 2rem 0 0;
+}
+@media (max-width: 500px) {
+  .intro .intro-container .text-container p {
+    font-size: 2rem;
+  }
+}
+.middle-content {
+  margin-top: 1rem;
+  border-bottom: 2px dotted indigo;
+}
+.middle-content h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.middle-content .skills {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.middle-content .skills .front-end {
+  font-size: 1.6rem;
+}
+.middle-content .skills .front-end span {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+@media (max-width: 500px) {
+  .middle-content .skills .front-end b {
+    font-size: 2rem;
+  }
+}
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+.work h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.work .jobs {
+  height: 20rem;
+}
+@media (max-width: 500px) {
+  .work .jobs {
+    height: auto;
+  }
+}
+.work .jobs .headings {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1% 0 0 0;
+}
+.work .jobs .headings h3 {
+  width: 50%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .work .jobs .headings {
+    margin-top: 2rem;
+  }
+}
+.work .jobs .job1 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  background-color: silver;
+}
+@media (max-width: 500px) {
+  .work .jobs .job1 {
+    margin: 2rem 0 0 0;
+    font-size: 1.8rem;
+  }
+}
+.work .jobs .job1 p {
+  width: 50%;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+@media (max-width: 500px) {
+  .work .jobs .job1 p {
+    margin: 0 1% 0 1%;
+  }
+}
+.work .jobs .job2 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+}
+.work .jobs .job2 p {
+  width: 50%;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+@media (max-width: 500px) {
+  .work .jobs .job2 p {
+    margin: 0 1% 0 1%;
+  }
+}
+@media (max-width: 500px) {
+  .work .jobs .job2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+}
+.work .jobs .job3 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  background-color: silver;
+}
+@media (max-width: 500px) {
+  .work .jobs .job3 {
+    margin: 2rem 0 0 0;
+    font-size: 1.8rem;
+  }
+}
+.work .jobs .job3 p {
+  width: 50%;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+@media (max-width: 500px) {
+  .work .jobs .job3 p {
+    margin: 0 1% 0 1%;
+  }
+}
+footer {
+  background-color: slategray;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+footer a {
+  font-size: 2.5rem;
+}
+@media (max-width: 500px) {
+  footer a {
+    font-size: 3rem;
+  }
+}
