@@ -260,26 +260,88 @@ header nav a {
 .work .jobs {
   height: 20rem;
 }
+@media (max-width: 500px) {
+  .work .jobs {
+    height: auto;
+  }
+}
 .work .jobs .headings {
   display: flex;
   justify-content: space-around;
   font-size: 2rem;
   font-weight: bold;
+  margin: 1% 0 0 0;
+}
+.work .jobs .headings h3 {
+  width: 50%;
+  text-align: center;
 }
 @media (max-width: 500px) {
   .work .jobs .headings {
     margin-top: 2rem;
   }
 }
-.work .jobs .info {
+.work .jobs .job1 {
   display: flex;
   justify-content: space-around;
   font-size: 1.6rem;
 }
 @media (max-width: 500px) {
-  .work .jobs .info {
+  .work .jobs .job1 {
+    margin: 2rem 0 0 0;
+    font-size: 1.8rem;
+  }
+}
+.work .jobs .job1 p {
+  width: 50%;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+@media (max-width: 500px) {
+  .work .jobs .job1 p {
+    margin: 0 1% 0 1%;
+  }
+}
+.work .jobs .job2 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+}
+.work .jobs .job2 p {
+  width: 50%;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+@media (max-width: 500px) {
+  .work .jobs .job2 p {
+    margin: 0 1% 0 1%;
+  }
+}
+@media (max-width: 500px) {
+  .work .jobs .job2 {
     margin-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+}
+.work .jobs .job3 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .work .jobs .job3 {
+    margin: 2rem 0 0 0;
+    font-size: 1.8rem;
+  }
+}
+.work .jobs .job3 p {
+  width: 50%;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+@media (max-width: 500px) {
+  .work .jobs .job3 p {
+    margin: 0 1% 0 1%;
   }
 }
 footer {

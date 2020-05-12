@@ -229,6 +229,7 @@ header {
 		img {
 			flex-grow: 2;
 			.border();
+
 			@media (max-width:500px) {
 				width: 100%;
 				height: auto;
@@ -301,7 +302,7 @@ header {
 
 			b {
 				@16px-font: 1.6rem;
-				
+
 				@media (max-width:500px) {
 					font-size: 2rem;
 				}
@@ -334,6 +335,10 @@ header {
 	.jobs {
 		height: 20rem;
 
+		@media(max-width:500px) {
+			height: auto;
+		}
+
 
 
 		.headings {
@@ -341,27 +346,102 @@ header {
 			justify-content: space-around;
 			font-size: 2rem;
 			font-weight: bold;
+			margin: 1% 0 0 0;
 
-			@media (max-width:500px) {
+			h3 {
+				width: 50%;
+				text-align: center;
+			}
+
+			@media(max-width:500px) {
 				margin-top: 2rem;
 			}
 		}
 
 		//closes headings
-		.info {
+		.job1 {
 			display: flex;
 			justify-content: space-around;
 			font-size: @16px-font;
 
-			
 			@media (max-width:500px) {
-				margin-top: 2rem;
-				font-size: 2rem;
+				margin: 2rem 0 0 0;
+				font-size: 1.8rem;
 			}
+
+			p {
+				width: 50%;
+				text-align: center;
+				margin: .5rem 0;
+
+				@media (max-width:500px) {
+					margin: 0 1% 0 1%;
+				}
+			}
+
+			//closes p
 
 		}
 
-		//closes info
+		//closes job 1
+
+		.job2 {
+			display: flex;
+			justify-content: space-around;
+			font-size: @16px-font;
+
+			p {
+				width: 50%;
+				text-align: center;
+				margin: .5rem 0;
+
+				@media (max-width:500px) {
+					margin: 0 1% 0 1%;
+				}
+			}
+
+			//closes p
+
+
+			@media (max-width:500px) {
+				margin-top: 2rem;
+				font-size: 1.8rem;
+			}
+
+			//closes media
+
+		}
+
+		//closes job 2
+
+		.job3 {
+			display: flex;
+			justify-content: space-around;
+			font-size: @16px-font;
+
+			@media (max-width:500px) {
+				margin: 2rem 0 0 0;
+				font-size: 1.8rem;
+			}
+
+			p {
+				width: 50%;
+				text-align: center;
+				margin: .5rem 0;
+
+				@media (max-width:500px) {
+					margin: 0 1% 0 1%;
+				}
+			}
+
+			//closes p
+
+		}
+
+		//closes job 3
+
+
+
 	}
 
 	//closes jobs
@@ -379,7 +459,7 @@ footer {
 	a {
 		font-size: 2.5rem;
 
-		
+
 		@media (max-width:500px) {
 			font-size: 3rem;
 		}
