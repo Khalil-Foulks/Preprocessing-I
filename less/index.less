@@ -11,6 +11,7 @@
 @body-font: "Lato", sans-serif;
 @16px-font: 1.6rem;
 @top-margin: 1rem;
+@silver-background: silver;
 
 // mixins
 .flex() {
@@ -274,8 +275,6 @@ header {
 	.border();
 
 	h2 {
-		.flex();
-		align-items: baseline;
 		font-size: 4rem;
 		text-align: center;
 
@@ -285,18 +284,17 @@ header {
 
 	.skills {
 		.flex();
-		align-items: baseline;
 		text-align: center;
 
 		.front-end {
 			font-size: @16px-font;
 
-			h3 {
+			span {
 				font-size: 2rem;
 				font-weight: bold;
 				margin: 1rem;
 
-			}
+			}//closes front-end
 
 			//closes h3
 
@@ -305,8 +303,8 @@ header {
 
 				@media (max-width:500px) {
 					font-size: 2rem;
-				}
-			}
+				}//closes media
+			}//closes b
 		}
 
 		//closes front-end
@@ -363,6 +361,7 @@ header {
 			display: flex;
 			justify-content: space-around;
 			font-size: @16px-font;
+			background-color:@silver-background;
 
 			@media (max-width:500px) {
 				margin: 2rem 0 0 0;
@@ -418,6 +417,7 @@ header {
 			display: flex;
 			justify-content: space-around;
 			font-size: @16px-font;
+			background-color: @silver-background;
 
 			@media (max-width:500px) {
 				margin: 2rem 0 0 0;
